@@ -1,0 +1,27 @@
+<h1 class="title_page">Settings</h1>
+<video #videoStream></video>
+
+<div class="settings">
+  <div class="item">
+    <div class="title">Cameras:</div>
+    <select (change)="changeInputDevice()" [(ngModel)]="isSelectedCamera">
+      <option *ngFor="let item of cameraDevices" value="{{item.deviceId}}">{{item.label}}</option>
+    </select>
+  </div>
+  <div class="item">
+    <div class="title">Microphones:</div>
+    <select (change)="changeInputDevice()" [(ngModel)]="isSelectedMicrophone">
+      <option *ngFor="let item of microphoneDevices" value="{{item.deviceId}}">{{item.label}}</option>
+    </select>
+  </div>
+  <div class="item">
+    <div class="title">Speakers:</div>
+    <select (change)="changeOutputDevice()" [(ngModel)]="isSelectedSpeaker">
+      <option *ngFor="let item of speakerDevices" value="{{item.deviceId}}">{{item.label}}</option>
+    </select>
+  </div>
+</div>
+
+<div class="buttons">
+  <div class="btn" (click)="next()">Next</div>
+</div>

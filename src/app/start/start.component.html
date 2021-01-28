@@ -1,0 +1,16 @@
+<div *ngIf="isConfirmPermissionBlock; else DidNotConfirmPermission">
+  <h1 class="title_page">The application will ask for permission to use the camera and microphone!</h1>
+
+  <div class="buttons">
+    <div class="btn" (click)="notConfirm()">I'm not giving it</div>
+    <div class="btn" (click)="confirm()">Okay</div>
+  </div>
+</div>
+
+<ng-template #DidNotConfirmPermission>
+  <h1 class="title_page">Sorry, but without consent, we will not let you on!</h1>
+
+  <div class="buttons">
+    <div class="btn" (click)="notConfirm()">Back</div>
+  </div>
+</ng-template>

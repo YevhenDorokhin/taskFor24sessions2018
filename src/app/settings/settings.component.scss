@@ -1,0 +1,35 @@
+.settings {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0 40px;
+    .item {
+        margin: 0 20px;
+        text-align: left;
+        position: relative;
+        &:after {
+            content: '>';
+            position: absolute;
+            bottom: 4px;
+            right: 7px;
+            transform: rotate(90deg);
+            color: #3e6cc7;
+            font-size: 18px;
+            pointer-events: none;
+        }
+    }
+    .title {
+        font-size: 16px;
+        margin: 0 0 10px;
+    }
+    select {
+        width: 200px;
+        border: 1px solid #3e6cc7;
+        padding: 5px 20px 5px 10px;
+        background: none;
+    }
+}
+
+.btn {
+    width: 200px;
+}

@@ -1,0 +1,10 @@
+<div>
+  <h1 class="title_page">Meeting is going to start in a few minutes</h1>
+
+  <video #videoStream></video>
+
+  <div class="buttons">
+    <div class="btn" (click)="toggleVideoMute()">Video: {{isMuteVideo ? 'unmute' : 'mute'}}</div>
+    <div class="btn" (click)="toggleMicrophoneMute()">Microphone: {{isMuteMicrophone ? 'unmute' : 'mute'}}</div>
+  </div>
+</div>
